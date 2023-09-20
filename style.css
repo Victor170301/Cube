@@ -1,0 +1,93 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
+
+:root {
+    --cor1: #AE4DE8;
+    --cor2: #8A50F2;
+    --cor3: #5F53DB;
+    --cor4: #506EF2;
+    --cor5: #4D92E8;
+    --tamanho-fonte: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    user-select: none;
+}
+
+header {
+    font-family: 'Tilt Warp';
+    font-weight: var(--tamanho-fonte);
+    background-color: #ffffff;
+    box-shadow: -7px -3px 40px 15px #8A50F2, inset 1px -3px 6px 0px #cac2d9;
+    transition-duration: 0.5s;
+    padding: 10px;
+}
+
+.menu-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0px 60px;
+}
+
+.menu-content > ul {
+    display: flex;
+    list-style-type: none;
+    transition: transform 0.3s ease-in-out;
+}
+
+.menu-content:hover > ul {
+    transform: scale(1.05);
+}
+
+.menu-content > a > img {
+    width: 200px;
+    margin: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.menu-content > a > img:hover {
+    transform: scale(1.1);
+}
+
+.menu-content > ul > li > a {
+    padding: var(--tamanho-fonte);
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 50%;
+    transition-duration: 0.5s;
+}
+
+.menu-content > ul > li > a:hover {
+    background-color: #8A50F2;
+    border: 2px solid #506EF2;
+    border-radius: 15%;
+    color: white;
+    box-shadow: 0px 0px 10px var(--cor);
+}
+
+header:hover {
+    box-shadow: -7px -3px 40px 20px #9263e9, inset 1px -3px 6px 0px #875fd1;
+}
+
+@media (max-width: 600px) {
+    .menu-content {
+        flex-direction: column;
+        align-items: center;
+        margin: 10px;
+    }
+
+    .menu-content > ul > li > a {
+        width: 100%;
+        margin: 5px 0;
+        text-align: center;
+    }
+}
